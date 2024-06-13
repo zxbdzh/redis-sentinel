@@ -1,0 +1,81 @@
+version: '3.7'
+services:
+  master:
+    image: redis
+    container_name: redis-master
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - 7001:7001
+    volumes:
+      - ./conf/7001:/etc/redis
+      - ./data/7001:/data
+    networks:
+      - redis-network
+
+  slave1:
+    image: redis
+    container_name: redis-slave-1
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - 7002:7002
+    volumes:
+      - ./conf/7002:/etc/redis
+      - ./data/7002:/data
+    networks:
+      - redis-network
+
+  slave2:
+    image: redis
+    container_name: redis-slave-2
+    command: redis-server /etc/redis/redis.conf
+    ports:
+      - 7003:7003
+    volumes:
+      - ./conf/7003:/etc/redis
+      - ./data/7003:/data
+    networks:
+      - redis-network
+
+  sentinel1:
+    image: redis
+    container_name: redis-sentinel-1
+    restart: always
+    ports:
+      - 27001:27001 
+    command: redis-sentinel /usr/local/etc/redis/sentinel.conf
+    volumes:
+      - ./conf/s1/sentinel.conf:/usr/local/etc/redis/sentinel.conf
+      - ./data/s1:/data
+    networks:
+      - redis-network
+
+  sentinel2:
+    image: redis
+    container_name: redis-sentinel-2
+    restart: always
+    ports:
+      - 27002:27002 
+    command: redis-sentinel /usr/local/etc/redis/sentinel.conf
+    volumes:
+      - ./conf/s2/sentinel.conf:/usr/local/etc/redis/sentinel.conf
+      - ./data/s2:/data
+    networks:
+      - redis-network
+
+  sentinel3:
+    image: redis
+    container_name: redis-sentinel-3
+    restart: always
+    ports:
+      - 27003:27003 
+    command: redis-sentinel /usr/local/etc/redis/sentinel.conf
+    volumes:
+      - ./conf/s3/sentinel.conf:/usr/local/etc/redis/sentinel.conf
+      - ./data/s3:/data
+    networks:
+      - redis-network
+
+networks:
+  redis-network:
+    external: true
+
