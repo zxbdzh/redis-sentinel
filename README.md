@@ -24,6 +24,7 @@ chmod +x ./changeIp.sh
 在`docker`下执行命令：
 
 ```bash
+docker network create redis-network
 docker-compose up -d
 ```
 
