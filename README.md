@@ -3,7 +3,7 @@
 
 运行在 `docker` 目录下，文件夹如下
 
-![image-20240613145228630](F:\BaiduSyncdisk\project\redis-sentinel\assests\image-20240613145228630.png)
+![image-20240613145228630](https://cn-sy1.rains3.com/picgo/2024/06/image-20240613145228630.png)
 
 
 
@@ -31,7 +31,7 @@ docker-compose up -d
 
 效果
 
-![recording 12](F:\BaiduSyncdisk\project\redis-sentinel\assests\recording 12.gif)
+![recording 12](https://cn-sy1.rains3.com/picgo/2024/06/recording%2012.gif)
 
 
 
