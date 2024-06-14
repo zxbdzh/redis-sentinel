@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 原始 IP 地址
-old_ip="0.0.0.0"
+old_ip="1.1.1.1"
 
 # 提示用户输入新的 IP 地址
 read -p "请输入新的 IP 地址: " new_ip
