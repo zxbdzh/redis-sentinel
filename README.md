@@ -3,7 +3,7 @@
 
 运行在 `docker` 目录下，文件夹如下
 
-!()[https://cn-sy1.rains3.com/picgo/2024/06/image-20240613145228630.png]
+![](https://cn-sy1.rains3.com/picgo/2024/06/image-20240613145228630.png)
 
 
 
@@ -32,7 +32,7 @@ docker-compose up -d
 
 效果
 
-!()[https://cn-sy1.rains3.com/picgo/2024/06/recording%2012.gif]
+![](https://cn-sy1.rains3.com/picgo/2024/06/recording%2012.gif)
 
 
 
